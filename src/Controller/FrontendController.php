@@ -7,7 +7,7 @@ use FrontendBackend\Controller\AppController;
 
 class FrontendController extends AppController
 {
-    public function frontend()
+    public function home()
     {
         //...
     }
