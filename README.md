@@ -1,0 +1,12 @@
+# Frontend Backend Example - Plugin for CakePHP
+
+## Installation
+
+You can install this plugin into your CakePHP application using [composer](https://getcomposer.org).
+
+The recommended way to install composer packages is:
+
+```
+composer require bisweb/frontend-backend-cakephp
+bin/cake plugin load FrontendBackend
+```

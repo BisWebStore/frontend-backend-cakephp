@@ -1,0 +1,27 @@
+{
+    "name": "bisweb/frontend-backend-cakephp",
+    "description": "Frontend Backend Example - Plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "plugin", "frontend", "backend"],
+    "license": "MIT",
+    "homepage": "https://bisweb.me",
+    "authors": [
+        {
+            "name": "Tim Bischoff",
+            "email": "tim.bischoff@bisweb.me",
+            "homepage": "https://bisweb.me",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "cakephp/cakephp": "^4.4",
+        "cakephp/authentication": "^2.0",
+        "cakephp/authorization": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FrontendBackend\\": "src/"
+        }
+    }
+}
