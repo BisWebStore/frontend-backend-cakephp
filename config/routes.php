@@ -17,6 +17,7 @@ $routes->plugin(
         });
 
         // Frontend Routes
-        $builder->fallbacks();
+        $builder->connect('/', ['controller' => 'Frontend', 'action' => 'home']);
+        $builder->connect('/frontend/{action}/*', ['controller' => 'Frontend']);
     }
 );
