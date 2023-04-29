@@ -1,14 +1,22 @@
 <?php
 declare(strict_types=1);
 
-use Cake\Routing\Route\DashedRoute;
+use Cake\Routing\RouteBuilder;
 
 $routes->plugin(
     'FrontendBackend',
     ['path' => '/'],
-    function ($routes) {
-        $routes->setRouteClass(DashedRoute::class);
+    function (RouteBuilder $builder) {
+        // Add custom routes here
 
-        $routes->get('/', ['controller' => 'Frontend', 'action' => 'home']);
+        $builder->prefix('Backend', function (RouteBuilder $routes) {
+            // All routes here will be prefixed with `/backend`, and
+            // have the `'prefix' => 'Backend'` route element added that
+            // will be required when generating URLs for these routes
+            $routes->fallbacks();
+        });
+
+        // Frontend Routes
+        $builder->fallbacks();
     }
 );
